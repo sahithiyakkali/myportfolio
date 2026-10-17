@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SupplyShield — case study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head><body><div class="wrap">
+<nav class="top"><a href="../index.html">← build log</a></nav>
+
+<p class="role">case study · MVP concept · Costco IT, 2026</p>
+<h1>SupplyShield</h1>
+<p class="lede">Turning chaos into command: one dashboard that lets Costco buyers see a disruption coming instead of finding out from an empty shelf.</p>
+
+<p class="loglabel">THE PROBLEM</p>
+<p>Costco buyers are the first line of defense when weather or port congestion threatens the supply chain, but they were working from supplier updates, gut feel, and data scattered across spreadsheets and reports. One buyer put it simply: <em>"By the time I hear there's a delay, it's already too late to do anything about it."</em> When wildfires hit Southern California, shipments backed up at the Port of LA, shelves at the LA warehouse thinned, and members left without items they wanted — a disruption the team only saw after it had already reached the floor.</p>
+
+<p class="loglabel">THE SOLUTION</p>
+<p>SupplyShield consolidates inventory, weather, and port congestion data into one proactive dashboard, so buyers and leadership can see risk coming and act before members feel it. I worked as the BI engineer on a 3-person cross-functional team, alongside a data engineer and a UX designer.</p>
+
+<div class="frame"><img src="../images/shot_overview.jpg" alt="SupplyShield overview dashboard showing a global disruption score, ports at risk, active shipments, a live map of alerts, and a news feed of port disruptions"></div>
+<p class="capcap">The Overview dashboard — one glance at the health of the whole supply chain.</p>
+
+<p class="loglabel">WHAT A BUYER SEES</p>
+<p>Instead of a generic report, each product shows a specific recommended action — order now, find the nearest depot with stock, or no action needed — next to a 7-day projected inventory bar that turns from green to red as risk builds.</p>
+<div class="frame"><img src="../images/shot_buyer.jpg" alt="SupplyShield buyer dashboard: a table of products with risk status, projected inventory bars, and a recommended call to action for each item"></div>
+<p class="capcap">The Buyer dashboard — filtered to what one buyer owns, with a clear next action per product.</p>
+
+<p class="loglabel">WHAT LEADERSHIP SEES</p>
+<p>Leadership needed a different altitude: not per-SKU detail, but which disruptions were likely, what they'd cost, and what to do about each one.</p>
+<div class="frame2">
+<div><div class="frame"><img src="../images/shot_exec.jpg" alt="SupplyShield executive overview: on-time delivery, supply chain cost, risk factor, and efficiency score KPIs with a forecast chart"></div></div>
+<div><div class="frame"><img src="../images/shot_impact.jpg" alt="SupplyShield impact assessment table showing disruption events, probability, cost estimate, timeframe, and mitigation actions"></div></div>
+</div>
+<p class="capcap">Executive KPIs on the left, a per-disruption cost and mitigation table on the right.</p>
+
+<p class="loglabel">KEY DECISIONS</p>
+
+<div class="entry"><div class="meta"><span>01</span></div>
+<h3>One tool, two altitudes</h3>
+<p>Buyers needed an action per SKU; leadership needed a portfolio view of risk and cost. Rather than build two disconnected tools, SupplyShield used one data model with two dashboards, so a disruption buyers were already handling was instantly visible to leadership in dollar terms, without a separate report.</p></div>
+
+<div class="entry"><div class="meta"><span>02</span></div>
+<h3>Lead with the call to action, not the data</h3>
+<p>Early internal reviews showed buyers didn't want more charts — they wanted to know what to do. Every row in the buyer dashboard leads with a specific action (order now, find nearest depot, not urgent) rather than a raw risk score, so the dashboard is read in seconds, not interpreted.</p></div>
+
+<div class="entry"><div class="meta"><span>03</span></div>
+<h3>Price the disruption, not just the delay</h3>
+<p>A congestion alert on its own doesn't tell leadership what to prioritize. The executive view attaches an estimated cost and probability to each disruption event, so mitigation effort goes to the highest expected-cost risk first, not just the most recent alert.</p></div>
+
+<p class="loglabel">BUSINESS CASE</p>
+<p>Over 80% of Costco's cargo moves through maritime containers, and U.S. ports rank among the least efficient of 370 global ports. A 1% delay in U.S. port trade ties up more than $10 billion in goods, and congestion of a week or more is common in peak season — so even a 2-day early warning gives a buyer real room to reroute or reprioritize before a disruption reaches the shelf.</p>
+
+<p class="loglabel">WHAT'S NEXT</p>
+<p>This was scoped and designed as a focused MVP — mockup-complete and ready to build. The roadmap beyond it: vendor-level risk scoring, extending past U.S. ports to global imports, predictive "what if" scenario planning, and integrating directly with existing inventory and sourcing platforms instead of standing alone.</p>
+
+<footer><a href="../index.html">← back to build log</a></footer>
+</div></body></html>
