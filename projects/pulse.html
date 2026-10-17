@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse — case study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head><body><div class="wrap">
+<a class="back" href="../index.html">← Back to projects</a>
+<span class="tag sans">Case study</span>
+<h1>Pulse: hitting protein goals as a broke, busy, vegetarian student</h1>
+<p class="lede">An AI-native build, start to live product, in a single week of evenings.</p>
+
+<div class="stats">
+<div><strong>~1 wk</strong><span>evenings, solo</span></div>
+<div><strong>21</strong><span>recipes across 9 cuisines</span></div>
+<div><strong>$0</strong><span>hosting cost</span></div>
+</div>
+
+<h2>The problem</h2>
+<p>Vegetarian protein advice online defaults to one of two things: meal plans that assume unlimited time and a stocked pantry, or generic "eat more lentils" tips with no plan attached. As an incoming MBA student about to be short on both time and money, I wanted something that told me, specifically, what to cook <em>this week</em> with what I could actually afford — and that didn't assume my only cuisine was the one tied to my name.</p>
+
+<h2>Who it's for</h2>
+<p>Time-poor, budget-conscious vegetarians — students especially — who know roughly what "more protein" means but not how to turn that into a grocery list and a Tuesday-night dinner.</p>
+
+<h2>Key decisions</h2>
+<div class="card">
+<h3>Optimize the grocery list, not just the meal</h3>
+<p>The real cost lever isn't a single recipe's price — it's ingredient overlap. Once you've bought a bag of lentils, every extra serving from it is nearly free. So the planner doesn't rank meals by individual cost; it greedily builds a basket that maximizes meals-per-dollar across shared ingredients, respecting a weekly budget.</p>
+</div>
+<div class="card">
+<h3>Cuisine personalization that resists stereotyping</h3>
+<p>Early versions let a user pick favorite cuisines and just boosted those. The problem: someone who picks "Indian" would get only Indian food — flattening them to one assumption. I added a decay function instead: each repeat of a cuisine within the week lowers its score for the next suggestion, so favorites are weighted up but variety is structurally preserved rather than left to chance.</p>
+</div>
+<div class="card">
+<h3>Let weekly gaps steer daily suggestions</h3>
+<p>Nutrient targets reset daily in most trackers, which means a bad Tuesday is invisible by Wednesday. Pulse instead looks at the week-to-date shortfall and lets it bias same-day suggestions — if you're behind on fiber for the week, today's top pick leans fiber-heavy, not just protein-heavy.</p>
+</div>
+
+<h2>What shipped</h2>
+<div class="grid2">
+<div class="kv"><b>Onboarding</b>Three-step welcome flow sets goals, diet, cuisines, and must-haves</div>
+<div class="kv"><b>Today / Week</b>Progress vs. targets, protein by day, cuisines eaten</div>
+<div class="kv"><b>Recipes</b>Full ingredients, steps, servings scaler, pantry checklist</div>
+<div class="kv"><b>Groceries</b>Budget-aware basket, "already own this" list, copyable shopping list</div>
+<div class="kv"><b>Logging</b>Pulse meals, free-text foods, AI-estimated nutrition from a description</div>
+<div class="kv"><b>Swaps</b>Nine quick substitutions for typical carb-heavy meals</div>
+</div>
+
+<h2>What I'd do with more time</h2>
+<p>Real nutrition data (USDA FoodData Central) and local store prices instead of hand-estimated values; a larger recipe library across more cuisines; accounts and sync, which need a hosted database; and talking to 5–10 classmates to pressure-test whether the grocery optimizer actually changes what they buy, not just what they say they'd buy.</p>
+
+<h2>Try it</h2>
+<p><a href="https://YOUR-USERNAME.github.io/Pulse/" target="_blank">Live app →</a> &nbsp;·&nbsp; <a href="https://github.com/YOUR-USERNAME/Pulse" target="_blank">Code →</a></p>
+
+<footer>Built solo with Claude, end to end — product thinking, UX, and implementation.</footer>
+</div></body></html>
