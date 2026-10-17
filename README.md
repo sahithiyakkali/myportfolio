@@ -1,6 +1,6 @@
-# myportfolio
+# My Portfolio
 
-Static site, no build step. Same deploy pattern as Pulse.
+My Portfolio Website: https://sahithiyakkali.github.io/myportfolio/index.html
 
 ## What's here
 - `index.html` — home: photo, bio, build log (projects), work experience, education, hobbies
