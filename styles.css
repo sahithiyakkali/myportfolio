@@ -85,3 +85,18 @@ footer{font-family:var(--mono);font-size:.82rem;color:var(--mute);margin-top:60p
 
 /* role tag used in hero + job list */
 .role-tag{display:inline-block;font-family:var(--mono);font-size:.74rem;background:var(--cobalt);color:#fff;border-radius:5px;padding:2px 8px;margin-right:6px}
+
+/* sketch accents + deep-dive deck */
+.sketchrow{display:flex;gap:22px;align-items:center;margin:18px 0 28px}
+.sketchrow img{width:170px;border-radius:10px;flex:none}
+.sketchrow p{margin:0;color:var(--ink)}
+.sketchrow.rev{flex-direction:row-reverse}
+@media(max-width:560px){.sketchrow{flex-direction:column}.sketchrow.rev{flex-direction:column}.sketchrow img{width:100%;max-width:260px}}
+details.deepdive{margin-top:40px;border-top:1px solid var(--line);padding-top:24px}
+details.deepdive summary{font-family:var(--sans);font-weight:700;cursor:pointer;font-size:1.05rem;list-style:none}
+details.deepdive summary::-webkit-details-marker{display:none}
+details.deepdive summary::before{content:"+ ";color:var(--cobalt-ink)}
+details.deepdive[open] summary::before{content:"– "}
+details.deepdive p.sub{font-family:var(--sans);color:var(--mute);font-size:.92rem;margin:8px 0 20px}
+.deckgrid{display:grid;grid-template-columns:1fr;gap:14px}
+.deckgrid .frame{margin:0}
