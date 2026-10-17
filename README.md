@@ -2,9 +2,6 @@
 
 Personal portfolio site. Static HTML, no build step — same setup as Pulse.
 
-## Before you publish
-
-Open `index.html` and `projects/pulse.html` and replace every `YOUR-USERNAME` with your actual GitHub username, and fix the GitHub link in `index.html` if needed.
 
 ## Deploy
 
